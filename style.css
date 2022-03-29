@@ -13,7 +13,7 @@ html, body{
     align-items: flex-start;
 }
 .container > div:nth-child(1n){
-    background-color: #576574;
+    background-color: #e17055;
 }
 .container > div:nth-child(2n){
     background-color: #34ace0;
@@ -28,21 +28,27 @@ html, body{
     background-color: #6ab04c;
 }
 .container > div:nth-child(6n){
-    background-color: #218c74;
+    background-color: #02658b;
+}
+.container > div:nth-child(7n){
+    background-color: #ff5252;
 }
 .container{
+    width: 60%; 
+    margin: 50px auto;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 50px auto 50px;
-    gap: 10px;
+    gap: 20px;
     grid-template-areas: 
-    "header header header header header"
-    "b1 b2 b3 s s"
-    "m m m s s"
-    "m m m s s"
-    "m m m s s"
-    "m m m s s"
-    "f f f f f";
+    "header header header header"
+    "b1 b2 b3 s"
+    "m m m s"
+    "m m m s"
+    "m m m s"
+    "m m m s"
+    "f f f f";
+    border: 1px solid gray;
 }
 .header{
     grid-area: header;
@@ -58,13 +64,14 @@ html, body{
 }
 .main{
     grid-area: m;
-    height: 438px;
+    height: 240px;
 }
 .sidebar{
     grid-area: s;
 }
 .footer{
     grid-area: f;
+    height: 70px;
 }
 .box1, .box2, .box3 {
     height: 208px;
